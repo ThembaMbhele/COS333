@@ -1,0 +1,6 @@
+pr [enter the number of circles]
+make "numCircles readlist
+print :numCircles
+arc 360 30
+setpos 20 20
+arc 360 30
