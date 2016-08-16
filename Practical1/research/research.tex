@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\title{COS333 Research Assignment}
+\author{Themba Mbhele}
+\date{28 July 2016}
+
+\begin{document}
+
+\maketitle
+
+\section{Research Questions}
+\begin{enumerate}
+    \item A programming language is said to be turing complete if it is computationally equivalent to a turing machine. This means that any problem that can be solved using a turing machine with its resources, can also be solved by the programming language together with its resources.
+    \item An esoteric programming language is a language that has been designed to test the limitations of programming language design. Esoteric languages were created with the intention of experimentation and fun rather than practical use.
+    \item \underline{For} \\ Even though the intent behind esoteric programming languages was fun, the process of engaging with an esolang and analysing its pros and cons will help computer scientists better understand why certain boundaries are not crossed. Computer Scientists will better appreciate the significance of syntactic design choices that affect the readability and simplicity of a programming language.\\ \underline{Against}\\ Instead of playing around with programming languages that cannot be used to develop quality software, programmers should rather spend that time learning more about the mainstream programming languages so that they may gain a deeper understanding of the languages. This deepened understanding will help programmers develop better structured and efficient code. 
+    \item \underline{Omgrofl} \\ Omgrofl is an esolang that was created by Juraj Borza in 2006. The intent behing Omgrofl was to create a programming language that allows one to design programs that appear to  resemble internet slang. Syntactictly, the variables in Omgrofl must take the form of slang words such as lol. Omgrofl is not case-sensitive. A program written in Omgrofl consists of a number of statements that are written on separate lines. If two statements are written on the same line, only the first statement will be executed and the second will be ignored. A statement can include conditions or expressions. The keyword \textbf{wtf} is a conditional statement that is similar to \textbf{if} in languages such as C and Java. The possible conditions that one can check are \textbf{iz uber} which checks whether one variable is greater than the other or \textbf{iz liek} to determine whether two expressions are equal. Loops can be constructed using the keyword \textbf{rtfm} (to begin a loop) and the matching \textbf{brb} keyword whereby each statement withing these keywords will be executed indefinitely. To exit a loop, the command \textbf{tldr} must be used. The following is a code sample written in Omgrofl:\\
+    lol iz 1 wh00t assign 1 to lol\\
+    wtf lol iz liek 1 wh00t if lol is equal to 1\\
+    rofl lol wh00t print out the value of 1\\
+    lmao lol wh00t increment lol by 1\\
+    brb\\
+    The readability of Omgrofl is dependent on whether the user is familiar with internet slang or not. Even though the user still needs to learn what the keywords of the language are, it becomes easier to remeber if one is familiar with the slang. In addition, Because statements need to be written on separate lines, the readability of a program written in Omgrofl is improved.
+    \\ \underline{brainf*ck}\\ The most popular esolang is Brainf*ck is which was created by Urban M{\"u}ller in 1993. The intent behind it was to create a language which could be implemented by the smallest possible compiler. The language only consists of the following eight commands: \\
+    \begin{itemize}
+        \item $>$ to increment the data pointer
+        \item $<$ to decrement the data pointer
+        \item + to increment byte at data pointer
+        \item - to decrement byte at the data pointer
+        \item . to output the byte at the data pointer
+        \item , to accept one byte of input
+        \item $[$ if the byte at the data pointer is zero, then instead of moving the  instruction pointer forward to the next command, jump it forward to the command after the matching ] command.
+        \item $]$ if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching [ command
+    \end{itemize}
+    A brainf*ck program is composed of a sequence of these commands. The commands are usually executed in a sequential manner.\\Below is a hello world program written using Brainf*ck:\\
+    ++++++++[$>$++++[$>$++$>$+++$>$+++$>$+$<<<<$-]$>$+$>$+$>$-$>>$+[$<$]$<$-]$>>$.$>$---.+++++++..+++.$>>$.$<$-.$<$.+++.------.--------.$>>$+.$>$++.\\
+    The readability of a Brainf*ck program is poor because of the minimal set of characters that the language provides.
+    \item Emacs and its different variations are a family of text editors. Emacs is integrated with the programming language Lisp to extend the features and capabilities of the text editor. This allows users to create new commands to do task such as manage emails. They allow the user to do more than just edit text. Originally, Lisp was created as a mathematical notation for computer programs and it became the favoured language for Artificial Intelligence. Lisp and all its dialects are multi-paradigm programming languages.
+    \item Scala, a multi-paradigm programming language, is based upon a programming language known as Funnel. Funnel was a pure and minimal language that was based on functional programming concepts and petri nets. In addition to being a functional programming language, scala is also an object-oriented language of which Funnel is not.
+    \item C++ is a general purpose programming language which has imperative, object-oriented and generic programming features. It is an extension of the C programming language. The features that c++ provides include virtual functions, function and operator overloading, references, constants, type-safe free-store memory allocation, and improved type checking. The philosophy that was used by C++ to extend C was to design C++ such that object-oriented programming, generic programming, and meta programming are directly supported. It was also designed to come with a standard library.\\Object-C, much like C++, is a general purpose, object-oriented programming language which also extends the C programming language. It adds Smalltalk messaging mechanisms, as well as run time binding, forwarding, categories, and posing. The philosophy behind the design of Objective-C has similarities to the one behind C++ as it also directly supports object-oriented programming. However, it does not provide a standard library. A major application area for Objective-C is operating system implementation for Apple.
+    \item Alice is a programming language that was created at the German Saarland University by the Programming Systems Laboratory. It has an integrated development environment. Alice was created to teach middle school aged students fundamental programming concepts in a 3D environment by providing the ability to create animations within scenes. Using the interface provided by Alice, students can drag and drop object tiles to create a program where the underlying instructions correspond to statements in production level languages such as C++ and Java. This design choice allows students to learn programming without having to worry about the semantics of these production level programming languages. Because Alice is co-joined with an IDE, there is no syntax that needs to be remembered because of the drag and drop functionality that is provided by the IDE. This allows student to focus primarily on programming logic as they do not have to worry about syntax errors that can be caused by trivial mistakes such as a missing character or unbalanced parentheses.
+    \item Design by Contract is an approach to designing software. It is a software correctness methodology that uses preconditions together with postconditions to document the change in state due to a piece of program execution. Languages such as Ada and Cobra natively support DbC.
+    \item Valgrind is a programming tool that is used to debug memory problems, detect memory leaks and to perform profiling.
+\end{enumerate}
+
+\bibliographystyle{plain}
+\bibliography{references} 
+\cite{website:fermentas-lambda}
+\cite{toptenesolangs}
+\cite{omgrofl}
+\cite{brainfuck}
+\cite{emacs}
+\cite{c++vsobjective-c}
+\cite{c++}
+\cite{objective-c}
+\cite{valgrind}
+\cite{alice}
+\cite{alicesoftware}
+\cite{aliceguide}
+\cite{dbc}
+\cite{scala}
+\end{document}
