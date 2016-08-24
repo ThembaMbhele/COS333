@@ -7,16 +7,8 @@ program matrix
 	integer, dimension(5,5) :: myMatrix
 
 	initializeCount = 1
-
-	do row = 1, 5
-		do col = 1, 5
-			if(row == 3 .and. col == 1) then
-				initializeCount = 16
-			end if
-			myMatrix(row,col) = initializeCount
-			initializeCount = initializeCount + 1
-		end do
-	end do
+	
+	myMatrix = reshape((/1,2,3,4,5,6,7,8,9,10,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30/), shape(myMatrix))
 	
 	print *, "Enter number in the range 1-10: "
 	read *, userInput
@@ -34,8 +26,12 @@ program matrix
 	end if
 	
 	call populateMatrix(myMatrix, userInput)
+	
+	print *, "Enter item to search for: "
+	read *, userInput
+	
+	call searchMatrix(myMatrix, userInput)
 	call printMatrix(myMatrix)
-	call searchMatrix(myMatrix, 16)
 end program matrix
 
 subroutine printMatrix(m)
